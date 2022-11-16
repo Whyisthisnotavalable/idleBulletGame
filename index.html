@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Incremental Arena</title>
+
+<head>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" />
+    <meta charset="utf8" />
+    <meta name="description" content="Made by iblobtouch on Github." />
+    <meta name="keywords" content="" />
+    <meta name="author" content="iblobtouch" />
+</head>
+
+<body onload="onload()">
+    <noscript>
+			<div id="noscript">
+				<h1>
+					This game requires Javascript to run. You can learn how to re-enable JavaScript <a href="//enable-javascript.com/">here</a>.
+				</h1>
+			</div>
+		</noscript>
+
+    <div id="mainArea">
+        <div id="content">
+            <div id="game">
+            </div>
+        </div>
+        <form id="interface">
+            <input type="color" name="favcolor" value="#ff0000" id="playerCol" class="ui" onchange="setPlayerColour()">
+            <label id="curWave" class="ui">0</label>
+            <label id="curPower" class="ui">0</label>
+            <label id="curMoney" class="ui">0</label>
+            <label id="curMoneyGainRate" class="ui">0</label>
+            <label id="curPlayerHP" class="ui">0</label>
+            <label id="curArenaName" class="ui">0</label>
+            <label id="fps" class="ui">0</label>
+        </form>
+        <button id="newWeapon" class="ui" onclick="newWeapon(-1)">Buy New Weapon (N)</button>
+        <button id="newArmour" class="ui" onclick="newArmour()">Buy New Armour (M)</button>
+        <button id="idle" class="ui" onclick="toggleIdle()">Toggle idle mode (L)</button>
+        <button class="ui" onclick="location.href='https://iblobtouch.github.io/IdleBulletGame/help.html'">Help</button>
+        <button class="ui" onclick="location.href='https://discord.gg/qxJEtfY'">Discord Link</button>
+    </div>
+
+    <script src="scripts/pixi.js"></script>
+    <script src="scripts/break_infinity.min.js"></script>
+    <script src="scripts/functions.js"></script>
+    <script src="data/effectData.js"></script>
+    <script src="scripts/classes.js"></script>
+    <script src="data/weaponData.js"></script>
+    <script src="data/aiData.js"></script>
+    <script src="data/rarityData.js"></script>
+    <script src="scripts/init.js"></script>
+    <script src="scripts/events.js"></script>
+</body>
+</html>
